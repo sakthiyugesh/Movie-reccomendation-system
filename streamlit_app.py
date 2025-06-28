@@ -36,7 +36,7 @@ def reccommend_movie_KN(title, n):
 
 # --- TMDb API Call ---
 def get_movies(title):
-    API_KEY = 'a01b8453d45c3f5806c7397aa4addae5'
+    API_KEY = st.secrets["TMDB_API_KEY"]
     BASE_URL = 'https://api.themoviedb.org/3/search/movie'
     params = {'api_key': API_KEY, 'query': title}
     res = requests.get(BASE_URL, params=params)
